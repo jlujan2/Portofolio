@@ -616,3 +616,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+
+/************ About Css ************/
+.about {
+  display: flex;
+  align-items: center;
+}
+.about h2 {
+	font-size: 45px;
+	font-weight: 700;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.about image {
+  display: 1;
+}
+.about description{
+  display: flex;
+}
+.about p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+ 
+}
