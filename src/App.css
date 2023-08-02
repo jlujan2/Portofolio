@@ -309,8 +309,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #151515;
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
+  padding: 100px 50px;
+  margin-top: -10px;
 }
 .skill h2 {
 	font-size: 45px;
@@ -619,8 +619,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ About Css ************/
 .about {
+  padding: 0 0 50px 0;
+  position: relative;
   display: flex;
   align-items: center;
+  background-image: url('./assets/img/color-sharp.png');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .about h2 {
 	font-size: 45px;
@@ -640,5 +646,51 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
- 
+}
+
+/************ Experience Css ************/
+.experience {
+  padding: 80px 0;
+  background-color: black;
+}
+.experience h2 {
+  font-size: 45px;
+	font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.experience cards{
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  align-items: center;
+}
+
+.experience .card {
+  color: #4A2FBD;
+  background-color: #4A2FBD;
+}
+
+.experience Accordion {
+  background-color: #4A2FBD;
+}
+
+.experience p {
+  color: white;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+}
+
+.experience .accordion-button:not(.collapsed) {
+  background-color: #4A2FBD;
+}
+
+.experience .accordion-button{
+  background-color: #4A2FBD;
+}
+
+.experience .accordion-collapse{
+  background-color: #241d41;
 }

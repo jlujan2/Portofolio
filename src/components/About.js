@@ -1,6 +1,7 @@
 import { Container } from "react-bootstrap";
 import Image from 'react-bootstrap/Image';
 import profilePhoto from "../assets/img/juank.jpg"
+import colorSharp from "../assets/img/color-sharp.png"
 
 export const About = () => {
 
@@ -41,6 +42,7 @@ export const About = () => {
                 </div>
                 
             </Container>
+          <img className="background-image-left" src={colorSharp} alt="Image" />
         </section>
       )
 }
