@@ -1,45 +1,29 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
+import projImg1 from "../assets/img/e-commerce-app (2).png";
 import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import liveIcon from '../assets/icons/icons8-live.svg';
 
 export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Ecommerce Application",
+      description: "ReactJS",
       imgUrl: projImg1,
+      live: liveIcon,
+      url: "https://celadon-horse-0a68b1.netlify.app/"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "To Do Notes",
+      description: "Python, Flask",
       imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+      live: liveIcon,
+      url: "https://celadon-horse-0a68b1.netlify.app/"
+    }
   ];
 
   return (
