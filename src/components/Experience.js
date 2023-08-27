@@ -5,7 +5,8 @@ import javaIcon from "../assets/icons/java.svg"
 import springBootIcon from "../assets/icons/spring-boot.svg"
 import sqlIcon from "../assets/icons/sql.png"
 import reactIcon from "../assets/icons/react.svg"
-
+import dotnetIcon from "../assets/icons/aspnet.svg"
+import javaScriptIcon from "../assets/icons/javascriptIcon.svg"
 
 function CustomToggle({ children, eventKey }) {
     const decoratedOnClick = useAccordionButton(eventKey, () =>
@@ -94,10 +95,9 @@ export const Experience = () => {
                             <Accordion.Body>
                                 <p>Developing back-end and database solutions in DNA Web App using Java, Sql in SpringBoot framework and ReactJs.</p>
                                 <div>
-                                  <img src={javaIcon} alt="Image" style={{width:"3%", marginRight:"3px"}}/>
-                                  <img src={springBootIcon} alt="Image" style={{width:"3%", marginRight:"3px", marginLeft:"3px"}}/>
+                                  <img src={dotnetIcon} alt="Image" style={{width:"3%", marginRight:"3px"}}/>
                                   <img src={sqlIcon} alt="Image" style={{width:"3%", marginRight:"3px", marginLeft:"3px"}}/>
-                                  <img src={reactIcon} alt="Image" style={{width:"3%", marginRight:"3px", marginLeft:"3px"}}/>
+                                  <img src={javaScriptIcon} alt="Image" style={{width:"3%", marginRight:"3px", marginLeft:"3px"}}/>
                                   
                                 </div>
                             </Accordion.Body>

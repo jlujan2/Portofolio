@@ -623,11 +623,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   display: flex;
   align-items: center;
+}
+
+#about{
   background-image: url('./assets/img/color-sharp.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .about h2 {
 	font-size: 45px;
 	font-weight: 700;
