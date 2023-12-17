@@ -3,7 +3,7 @@ Personal Portofolio
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-**Live Demo:** https://beautiful-brigadeiros-11ad76.netlify.app/ 
+**Live Demo:** [https://beautiful-brigadeiros-11ad76.netlify.app/ ](https://juanlujan.netlify.app/)
 
 ![image](https://github.com/jlujan2/Portofolio/assets/20192356/3c425db3-ed2f-4104-ab15-06266b8c0152)
 
