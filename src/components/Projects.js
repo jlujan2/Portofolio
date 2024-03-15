@@ -15,14 +15,7 @@ export const Projects = () => {
       description: "ReactJS",
       imgUrl: projImg1,
       live: liveIcon,
-      url: "https://celadon-horse-0a68b1.netlify.app/"
-    },
-    {
-      title: "To Do Notes",
-      description: "Python, Flask",
-      imgUrl: projImg2,
-      live: liveIcon,
-      url: "https://celadon-horse-0a68b1.netlify.app/"
+      url: "https://juan-lujan-ecommerce.netlify.app/"
     }
   ];
 
@@ -39,13 +32,13 @@ export const Projects = () => {
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                      <Nav.Link eventKey="first">Front End Projects</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                      <Nav.Link eventKey="second">Back End Projects</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      <Nav.Link eventKey="third">Full Stack</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>

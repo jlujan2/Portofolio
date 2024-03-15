@@ -4,6 +4,8 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import Button from '@mui/material/Button';
+import { Link } from '@mui/material';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -21,6 +23,10 @@ export const Banner = () => {
 
     return () => { clearInterval(ticker) };
   }, [text])
+
+  const downloadResume = () => {
+    window.location.href = "src\assets\resume\Juan_Lujan_Software_Engineer.pdf";
+  }
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -55,7 +61,15 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
+                <span className="tagline">Welcome to my Portfolio </span>
+                
+                <span className="resumeButton">
+                <a href='Juan_Lujan_Software_Engineer.pdf' download>
+                  <Button className="rButton" variant="contained">
+                      Resume
+                  </Button></a>
+                  </span>
+                
                 <h1>{`Hi! I'm Juan Carlos`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Engineer", "Back End", "Full Stack" ]'><span className="wrap">{text}</span></span></h1>
                   <p>I am Juan Carlos passionated Software Engineer located in Gainesville, Florida. I have 5+ years of experience and work in different industries providing software solutions more focused in the BackEnd</p>
                   <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>

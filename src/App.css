@@ -249,6 +249,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 16px;
   display: inline-block;
 }
+.banner .resumeButton {
+  margin-left: 10px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.banner .rButton {
+  background-color: rgba(170, 54, 124, 0.5);
+  border-color: '#0063cc';
+  border: '1px solid';
+}
 .banner h1 {
   font-size: 65px;
   font-weight: 700;

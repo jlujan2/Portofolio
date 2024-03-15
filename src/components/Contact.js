@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import emailjs from '@emailjs/browser';
+
 
 export const Contact = () => {
   const formInitialDetails = {
@@ -16,6 +18,15 @@ export const Contact = () => {
   const [buttonText, setButtonText] = useState('Send');
   const [status, setStatus] = useState({});
 
+  const resetFormDetails = () => {
+    setFormDetails({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''})
+  }
+
   const onFormUpdate = (category, value) => {
       setFormDetails({
         ...formDetails,
@@ -25,24 +36,32 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formInitialDetails);
+    console.log(e.target)
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully'});
-    } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
-    }
-  };
 
+    emailjs
+      .send(
+        'service_vfqlebl', 
+        'template_xixkuu5', 
+        {user_name: formDetails.firstName+formDetails.lastName, user_email: formDetails.email,
+      message: formDetails.message }, {
+        publicKey: 'qyJRf5Okx57gKThqW'
+      })
+      .then(
+        
+        () => {
+          setButtonText("Send");
+          setStatus({ succes: true, message: 'Message sent successfully'});
+          resetFormDetails();
+        },
+        (error) => {
+          console.log(error);
+          setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+        },
+      );
+  };
+    
   return (
     <section className="contact" id="connect">
       <Container>
@@ -65,7 +84,7 @@ export const Contact = () => {
                       <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
                     </Col>
                     <Col size={12} sm={6} className="px-1">
-                      <input type="text" value={formDetails.lasttName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
+                      <input type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}/>
                     </Col>
                     <Col size={12} sm={6} className="px-1">
                       <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)} />
