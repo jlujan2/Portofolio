@@ -24,10 +24,6 @@ export const Banner = () => {
     return () => { clearInterval(ticker) };
   }, [text])
 
-  const downloadResume = () => {
-    window.location.href = "src\assets\resume\Juan_Lujan_Software_Engineer.pdf";
-  }
-
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
@@ -53,6 +49,7 @@ export const Banner = () => {
     }
   }
 
+  
   return (
     <section className="banner" id="home">
       <Container>
@@ -64,7 +61,7 @@ export const Banner = () => {
                 <span className="tagline">Welcome to my Portfolio </span>
                 
                 <span className="resumeButton">
-                <a href='Juan_Lujan_Software_Engineer.pdf' download>
+                <a href='https://raw.githubusercontent.com/jlujan2/resume/main/Juan_Lujan_Software_Engineer.pdf' download>
                   <Button className="rButton" variant="contained">
                       Resume
                   </Button></a>
